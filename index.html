@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body ng-init="text1 = 'test text'; arr = [7, 9, 120]; fullName = {fName: 'Roy', lName: 'Leon'}">
+    <h1>Angularjs Examples</h1>
+    <p>Sum of array:
+        <span ng-bind="arr[0] + arr[1] + arr[2]"></span>
+    </p>
+    <p>My name : {{fullName.fName + " " + fullName.lName | uppercase}}</p>
+
+</body>
+
+</html>
