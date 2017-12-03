@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="myApp.js"></script>
+    <script src="demoCtrl.js"></script>
+    <title>Document</title>
+</head>
+
+<body ng-controller="demoCtrl">
+    <h1>Angularjs Examples</h1>
+    <input type="number" ng-model="first">
+    <select ng-model="operators">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" ng-model="second">
+    <p>x =
+        <span ng-bind="first"></span>
+    </p>
+    <p>y =
+        <span ng-bind="second"></span>
+    </p>
+    <p>Result:
+        <span ng-bind="result()"></span>
+
+    </p>
+
+</body>
+
+</html>

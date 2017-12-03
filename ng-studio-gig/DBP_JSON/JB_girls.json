@@ -1,0 +1,23 @@
+{ "d" : { 
+    "results": [ 
+      { "__metadata": { "uri": "http://dbpedia.org/resource/Category:Bond_girls" }, 
+        "http://www.w3.org/2004/02/skos/core#prefLabel": "Bond girls", 
+        "http://www.w3.org/2000/01/rdf-schema#label": "Bond girls", 
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": { "__deferred": { "uri": "http://www.w3.org/2004/02/skos/core#Concept" } }, 
+        "http://dbpedia.org/ontology/wikiPageID": "38101775", 
+        "http://www.w3.org/2002/07/owl#sameAs": { "__deferred": { "uri": "http://www.wikidata.org/entity/Q6000245" } }, 
+        "http://dbpedia.org/ontology/wikiPageRevisionID": "725846957", 
+        "http://www.w3.org/2002/07/owl#sameAs": { "__deferred": { "uri": "http://ja.dbpedia.org/resource/Category:ボンドガール" } }, 
+        "http://www.w3.org/ns/prov#wasDerivedFrom": { "__deferred": { "uri": "http://en.wikipedia.org/wiki/Category:Bond_girls?oldid=725846957" } }, 
+        "http://www.w3.org/2004/02/skos/core#broader": { "__deferred": { "uri": "http://dbpedia.org/resource/Category:Fictional_females_by_franchise" } }, 
+        "http://www.w3.org/2004/02/skos/core#broader": { "__deferred": { "uri": "http://dbpedia.org/resource/Category:James_Bond_characters" } }, 
+        "http://www.w3.org/2002/07/owl#sameAs": { "__deferred": { "uri": "http://pt.dbpedia.org/resource/Categoria:Bond_girls" } }, 
+        "http://www.w3.org/2002/07/owl#sameAs": { "__deferred": { "uri": "http://wikidata.dbpedia.org/resource/Q6000245" } }, 
+        "http://purl.org/voc/vrank#hasRank": { "__deferred": { "uri": "nodeID://b25312333" } }, 
+        "http://www.w3.org/2002/07/owl#sameAs": { "__deferred": { "uri": "http://it.dbpedia.org/resource/Categoria:Bond_girl" } }, 
+        "http://www.w3.org/2002/07/owl#sameAs": { "__deferred": { "uri": "http://fr.dbpedia.org/resource/Catégorie:James_Bond_girl" } }
+       } ,     { "__metadata": { "uri": "nodeID://b25312333" }, 
+        "http://purl.org/voc/vrank#rankValue": "0.4781452119350433"
+       } 
+   ], "__count": "2"
+   } }

@@ -1,0 +1,9 @@
+{ "d" : { 
+    "results": [ 
+      { "__metadata": { "uri": "http://en.wikipedia.org/wiki/James_Bond_(films)" }, 
+        "http://xmlns.com/foaf/0.1/primaryTopic": { "__deferred": { "uri": "http://dbpedia.org/resource/James_Bond_(films)" } }, 
+        "http://purl.org/dc/elements/1.1/language": "en", 
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": { "__deferred": { "uri": "http://xmlns.com/foaf/0.1/Document" } }
+       } 
+   ], "__count": "1"
+   } }

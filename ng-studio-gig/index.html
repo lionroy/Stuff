@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="fanApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+
+    <script src="app.js"></script>
+    <!-- <script src="backImg.js"></script> -->
+    <script src="Actor.js"></script>
+    <script src="Movie.js"></script>
+    <script src="actorsCtrl.js"></script>
+    <script src="movieCtrl.js"></script>
+    <script src="convertService.js"></script>
+    <title>007 Fan Page</title>
+</head>
+
+<body>
+    <header>
+        <img src="http://images.all-free-download.com/images/graphicthumb/james_bond_007_0_126191.jpg" alt="logo" srcset="">
+        <h1>James Bond Hall of Fame</h1>
+    </header>
+
+    <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Title</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="#">Link</a>
+                </li>
+                <li>
+                    <a href="#">Link</a>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#">Link</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">Action</a>
+                        </li>
+                        <li>
+                            <a href="#">Another action</a>
+                        </li>
+                        <li>
+                            <a href="#">Something else here</a>
+                        </li>
+                        <li>
+                            <a href="#">Separated link</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+
+
+    <main>
+
+        <div class="container">
+            <div back-img="http://placekitten.com/g/200/200">Hello there</div>
+            <div ng-controller="actorsCtrl">
+
+                <h3>The name's Bond, James Bond</h3>
+                <input type="text" name="search" ng-model="query"> Order By:
+                <select ng-model="orderProp">
+                    <option value="fName">Name</option>
+                    <option value="lName">Surname</option>
+                    <option value="years">Years</option>
+                </select>
+                <br/>
+                <br>
+
+
+                <div class="row">
+                    <div ng-repeat="a in actors | filter: query | orderBy : orderProp" class="aDeck col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                        <div class="aCard ">
+                            <a href="{{a.imdbURL}}">
+                                <img ng-src="{{a.picURL}}" alt="Bond, James Bond" class="img img-responsive">
+
+                                <p class="details">
+
+                                    {{a.fName}}
+                                    <br/> {{a.lName}}
+                                    <br/>
+                                </p>
+                                <p class="info"> {{a.years}}</p>
+                            </a>
+
+                            <!-- <button type="button" class="btn btn-default" ng-click="addCar()">Add Car</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Movie ctrl -->
+        <div class="container">
+            <div ng-controller="movieCtrl">
+                <h2>Film Selection</h2>
+                <div class="row">
+                    <div ng-repeat="m in films" class="aDeck col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                        <div class="fCard">
+
+                            <a href="{{m.imdbURL}}">
+                            <img class="img img-responsive" ng-src="{{m.picURL}}" alt="Bond, James Bond">
+                       
+                            <p class="details">
+
+                                {{m.title}}
+                                <!-- <br/> {{m.duration}} -->
+                                <br/>
+                            </p>
+                            <p class="Duration: ">{{m.displayTime}}</p>
+                            <!-- </a> -->
+
+                            <!-- <button type="button" class="btn btn-default" ng-click="addCar()">Add Car</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
